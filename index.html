@@ -10,7 +10,21 @@
     />
     <title>Pablo Royo</title>
   </head>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css"></link>
   <body>
+    <!-- Control buttons -->
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Show All
+      </button>
+      <button class="btn" onclick="filterSelection('html')">Html</button>
+      <button class="btn" onclick="filterSelection('JavaScript')">
+        JavaScript
+      </button>
+      <button class="btn" onclick="filterSelection('java')">Java</button>
+    </div>
+
     <div class="w-full max-w-screen-xl mx-auto px-6">
       <div class="flex justify-center p-4 px-3 py-10">
         <div class="w-full max-w-md">
@@ -19,30 +33,81 @@
               Lista de Proyectos
             </div>
             <div class="py-3 text-sm">
-              <div
-                class="
-                  flex
-                  justify-start
-                  cursor-pointer
-                  text-gray-700
-                  hover:text-blue-400 hover:bg-blue-100
-                  rounded-md
-                  px-2
-                  py-2
-                  my-2
-                "
-              >
-                <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
-                <div class="flex-grow font-medium px-2">
-                  Proyecto de Ejemplo
+              <div class="filterDiv html">
+                <div
+                  class="
+                    flex
+                    justify-start
+                    cursor-pointer
+                    text-gray-700
+                    hover:text-blue-400 hover:bg-blue-100
+                    rounded-md
+                    px-2
+                    py-2
+                    my-2
+                  "
+                >
+                  <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+                  <div class="flex-grow font-medium px-2">
+                    Proyecto de Ejemplo
+                  </div>
+                  <div class="text-sm font-normal text-gray-500 tracking-wide">
+                    HTML + CSS
+                  </div>
                 </div>
-                <div class="text-sm font-normal text-gray-500 tracking-wide">
-                  HTML + CSS
+              </div>
+
+              <div class="filterDiv JavaScript">
+                <div
+                  class="
+                    flex
+                    justify-start
+                    cursor-pointer
+                    text-gray-700
+                    hover:text-blue-400 hover:bg-blue-100
+                    rounded-md
+                    px-2
+                    py-2
+                    my-2
+                  "
+                >
+                  <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+                  <div class="flex-grow font-medium px-2">
+                    Proyecto de Ejemplo
+                  </div>
+                  <div class="text-sm font-normal text-gray-500 tracking-wide">
+                    JavaScript
+                  </div>
+                </div>
+              </div>
+
+              <div class="filterDiv java">
+                <div
+                  class="
+                    flex
+                    justify-start
+                    cursor-pointer
+                    text-gray-700
+                    hover:text-blue-400 hover:bg-blue-100
+                    rounded-md
+                    px-2
+                    py-2
+                    my-2
+                  "
+                >
+                  <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+                  <div class="flex-grow font-medium px-2">
+                    Proyecto de Ejemplo
+                  </div>
+                  <div class="text-sm font-normal text-gray-500 tracking-wide">
+                    Java
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <script>filterSelection("all")</script>
       </div>
     </div>
   </body>
